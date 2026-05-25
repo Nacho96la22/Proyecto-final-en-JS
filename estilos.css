@@ -1,0 +1,31 @@
+/* Fondo del web general */
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tamaño de la carousel */
+#carouselExampleInterval {
+    max-width: 1200px !important; 
+    width: 95% !important; 
+    margin: 50px auto; 
+}
+
+#carouselExampleInterval .carousel-item img {
+    width: 100% !important;    
+    height: auto !important;
+    max-height: 400px !important;
+    object-fit: contain !important;
+}
+
+/* Puntito seleccionado activo */
+#carouselExampleInterval .carousel-indicators .active {
+    background-color: #e10600 !important; 
+    opacity: 1;                           
+}
+
+/* Puntito seleccionado */
+#carouselExampleInterval .carousel-indicators button {
+    background-color: #000000; 
+}
