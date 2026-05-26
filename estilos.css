@@ -41,5 +41,22 @@ body {
     background-position: center right; 
     
     /* Evita que la imagen se repita como un mosaico */
-    background-repeat: no-repeat; 
+    background-repeat: repeat-x; 
+
+}
+
+/* El estilo del boton de contacto */
+.navbar-nav .btn-contacto-verde {
+    color: #ffffff !important;  
+    background-color: #198754 !important;     
+    border: none !important;       
+    padding: 6px 15px !important;    
+    border-radius: 4px !important;   
+    font-weight: bold;
+    transition: background-color 0.3s ease; 
+}
+
+.navbar-nav .btn-contacto-verde:hover {
+    background-color: #198754 !important; 
+    color: #ffffff !important;            
 }
