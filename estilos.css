@@ -29,3 +29,17 @@ body {
 #carouselExampleInterval .carousel-indicators button {
     background-color: #000000; 
 }
+
+.navbar-bandera {
+    /* Reemplaza con el nombre o ruta real de tu imagen PNG */
+    background-image: url('img/head/banderacuadro.png'); 
+    
+    /* Hace que la imagen cubra todo el espacio sin deformarse */
+    background-size: cover; 
+    
+    /* Centra la imagen */
+    background-position: center right; 
+    
+    /* Evita que la imagen se repita como un mosaico */
+    background-repeat: no-repeat; 
+}

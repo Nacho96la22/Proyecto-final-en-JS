@@ -18,6 +18,88 @@
 </head>
 
 <body>
+    		<header>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-bandera">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="./index.html">
+						<img
+							src="./img/head/logo.png"
+							alt=" logo formula 1"
+							width="100"
+							height="20"
+							class="d-inline-block align-text-middle m-2 rounded"
+						/>
+					</a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarNavDropdown"
+						aria-controls="navbarNavDropdown"
+						aria-expanded="false"
+						aria-label="Barra de Navegacion"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+						<ul class="navbar-nav m-auto">
+							<li class="nav-item">
+								<a
+									class="nav-link active"
+									aria-current="page"
+									href="./index.html"
+									>Inicio</a
+								>
+							</li>
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+								>
+									Categorías
+								</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a
+											class="dropdown-item"
+											href="./template/categorias.html?categoria=hombre"
+											>Hombre</a
+										>
+									</li>
+									<li>
+										<a
+											class="dropdown-item"
+											href="./template/categorias.html?categoria=mujer"
+											>Mujer</a
+										>
+									</li>
+
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link active"
+									aria-current="page"
+									href="./template/contacto.html"
+									>Contacto</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="position-relative">
+				<button
+					id="contrast-btn"
+					class="position-absolute top-0 end-0 me-3 mt-3 btn btn-dark"
+				>
+					<span class="bi bi-circle-half"> Cambiar Contraste</span>
+				</button>
+			</div>
+		</header>
     <div class="contenedor-carrusel">
 
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
