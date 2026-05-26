@@ -55,7 +55,7 @@
     <div class="container my-5" style="max-width: 600px;">
         <h2 class="text-center mb-4">Contactanos</h2>
 
-        <form>
+        <form id="form-contacto">
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre y apellido:</label>
                 <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
@@ -71,8 +71,9 @@
                 <textarea class="form-control" id="mensaje" rows="5"
                     placeholder="Escribí acá tu duda sobre las gorras, remeras o productos..." required></textarea>
             </div>
-            
-            <button type="submit" class="btn btn-danger w-100">Enviar Mensaje</button>
+            <!--<button type="submit" class="btn btn-danger w-100">Enviar Mensaje</button>-->
+            <button onclick="recibirContacto()" class="btn btn-danger w-100">Enviar Mensaje</button>
+
         </form>
     </div>
 
