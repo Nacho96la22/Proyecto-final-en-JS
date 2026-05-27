@@ -1,3 +1,4 @@
+// la funcion de Productos en principal
 document.addEventListener('DOMContentLoaded', function() {
     const filtroCategoria = document.getElementById('seleccion-categoria');
     const filtroEquipo = document.getElementById('seleccion-equipo');
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// la funcion de Contacto
 function recibirContacto(){
 
     function verificarMensaje(mensaje){
