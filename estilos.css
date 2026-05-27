@@ -60,3 +60,18 @@ body {
     background-color: #198754 !important; 
     color: #ffffff !important;            
 }
+
+/* El estilo del boton de carrito */
+
+.btn-carrito {
+    background-color: #e10600 !important; 
+    color: #ffffff !important;            
+    border: 3px solid #e10600 !important; 
+    transition: background-color 0.2s ease;
+}
+
+.btn-carrito:hover {
+    background-color: transparent !important;
+    border: 2px solid #e10600 !important;
+    color: #e10600 !important;
+}

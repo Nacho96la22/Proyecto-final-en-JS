@@ -27,8 +27,7 @@
 							alt=" logo formula 1"
 							width="100"
 							height="20"
-							class="d-inline-block align-text-middle m-2 rounded"
-						/>
+							class="d-inline-block align-text-middle m-2 rounded"/>
 					</a>
 					<button
 						class="navbar-toggler"
@@ -37,15 +36,14 @@
 						data-bs-target="#navbarNavDropdown"
 						aria-controls="navbarNavDropdown"
 						aria-expanded="false"
-						aria-label="Barra de Navegacion"
-					>
+						aria-label="Barra de Navegacion">
 						<span class="navbar-toggler-icon navbar"></span>
 					</button>
 					<div class="collapse navbar-collapse" id="navbarNavDropdown">
 						<ul class="navbar-nav ms-auto">
 							<li class="nav-item">
 								<a class="nav-link btn-contacto-verde" href="./template/contacto.html">Contacto</a>
-                                <a class="nav-link btn-contacto-verde" href="./template/lista-de-carrito.html">Carrito</a>
+                                <a class="nav-link btn-contacto-verde" href="./template/carrito.html">Carrito</a>
 							</li>
 						</ul>
 					</div>
@@ -97,6 +95,86 @@
             </button>
         </div>
 
+        <div class="container my-4" style="max-width: 700px;">
+            <div class="row g-3"> 
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <select class="form-select" id="seleccion-categoria">
+                            <option value="general">General</option>
+                            <option value="gorra">Gorras</option>
+                            <option value="remera">Remeras</option>
+                            <option value="campera">Camperas</option>
+                        </select>
+                        <label for="listaCategorias">Seleccioné una categoría:</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <select class="form-select" id="seleccion-equipo">
+                            <option value="general">General</option>
+                            <option value="alpine">Alpine</option>
+                            <option value="redbull">Red Bull</option>
+                            <option value="ferrari">Ferrari</option>
+                            <option value="mercedes">Mercedes</option>
+                        </select>
+                        <label for="listaEquipos">Seleccioné un equipo:</label>
+                    </div>        
+                </div>
+            </div>    
+        </div>
+
+        <div class="container my-5">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                <div class="col tarjeta-producto" data-categoria="remera" data-equipo="alpine">
+                    <div class="card h-100 shadow-sm"> <img src="img/products/alpine/remera-alpine.png" class="card-img-top"alt="Remera Alpine">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Remera de Alpine</h5>
+                            <p class="card-text text-muted">Versión original</p>
+                            <h4 class="text-danger">$45.000</h4>
+                            <a href="#" class="btn btn-carrito w-100 mt-2">Agrega al carrito</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col tarjeta-producto" data-categoria="campera" data-equipo="ferrari">
+                    <div class="card h-100 shadow-sm">
+                        <img src="img/products/ferrari/campera-ferrari.png" class="card-img-top" alt="Campera Ferrari">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Campera de Scuderia Ferrari</h5>
+                            <p class="card-text text-muted">Versión original</p>
+                            <h4 class="text-danger">$55.000</h4>
+                            <a href="#" class="btn btn-carrito w-100 mt-2">Agrega al carrito</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col tarjeta-producto" data-categoria="gorra" data-equipo="mercedes">
+                    <div class="card h-100 shadow-sm">
+                        <img src="img/products/mercedes/gorra-merecedes.png" class="card-img-top" alt="Gorra Mercedes">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Gorra de Mercedes </h5>
+                            <p class="card-text text-muted">Versión réplica</p>
+                            <h4 class="text-danger">$20.000</h4>
+                            <a href="#" class="btn btn-carrito w-100 mt-2">Agrega al carrito</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col tarjeta-producto" data-categoria="remera" data-equipo="redbull">
+                    <div class="card h-100 shadow-sm">
+                        <img src="img/products/redbull/remera-rb.png" class="card-img-top" alt="Remera Red Bull">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Remera de Red Bull </h5>
+                            <p class="card-text text-muted">Versión réplica</p>
+                            <h4 class="text-danger">$40.000</h4>
+                            <a href="#" class="btn btn-carrito w-100 mt-2">Agrega al carrito</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
