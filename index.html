@@ -17,45 +17,41 @@
 </head>
 
 <body>
-    		<header>
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-bandera">
-				<div class="container-fluid">
-					<a class="navbar-brand position-absolute start-50 translate-middle-x" href="./index.html" style="top: 10px;">
-						<img
-							src="./img/head/logo.png"
-							alt=" logo formula 1"
-							width="100"
-							height="20"
-							class="d-inline-block align-text-middle m-2 rounded"/>
-					</a>
-					<button
-						class="navbar-toggler"
-						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#navbarNavDropdown"
-						aria-controls="navbarNavDropdown"
-						aria-expanded="false"
-						aria-label="Barra de Navegacion">
-						<span class="navbar-toggler-icon navbar"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarNavDropdown">
-						<ul class="navbar-nav ms-auto">
-							<li class="nav-item">
-								<a class="nav-link btn-contacto-verde" href="./template/contacto.html">Contacto</a>
-                                <a class="nav-link btn-contacto-verde" href="./template/carrito.html">Carrito</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-			<div class="position-relative">
-				
-                <button id="themeBtn" class="toggle-btn position-absolute top-0 end-0 me-3 mt-1 btn btn-dark">
-                    <span class="sun"> ☀️ </span>
-                    <span class="moon"> 🌙 </span>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-bandera">
+            <div class="container-fluid">
+                <a class="navbar-brand position-absolute start-50 translate-middle-x" href="./index.html" style="top: 10px;">
+                    <img
+                        src="./img/head/logo.png"
+                        alt=" logo formula 1"
+                        width="100"
+                        height="20"
+                        class="d-inline-block align-text-middle m-2 rounded"/>
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
+                    aria-label="Barra de Navegacion">
+                    <span class="navbar-toggler-icon navbar"></span>
                 </button>
-			</div>
-		</header>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link btn-contacto-verde" href="./template/contacto.html">Contacto</a>
+                            <a class="nav-link btn-contacto-verde" href="./template/carrito.html">Carrito</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container text-end mt-2">
+            <button id="contrast-toggle" class="btn btn-secondary">🌙</button>
+        </div>
+    </header>
     <div class="contenedor-carrusel">
 
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -170,6 +166,7 @@
         crossorigin="anonymous"></script>
 
     <script src="app.js"></script>
+    <script src="constanteModeDark.js"></script>
 </body>
 
 </html>

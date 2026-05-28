@@ -37,12 +37,8 @@
             </div>
         </nav>
 
-		<div class="position-relative">
-				
-                <button id="themeBtn" class="toggle-btn position-absolute top-0 end-0 me-3 mt-1 btn btn-dark">
-                    <span class="sun"> ☀️ </span>
-                    <span class="moon"> 🌙 </span>
-                </button>
+		<div class="container text-end mt-2">
+                <button id="contrast-toggle" class="btn btn-secondary">🌙</button>
 			</div>
         </div>
     </header>
@@ -66,7 +62,7 @@
                 <textarea class="form-control" id="mensaje" rows="5"
                     placeholder="Escribí acá tu duda sobre las gorras, remeras o productos..." required></textarea>
             </div>
-            <button onclick="recibirContacto()" class="btn btn-danger w-100">Enviar Mensaje</button>
+            <button onclick="recibirContacto()" class="btn btn-danger btn-enviar-contacto w-100">Enviar Mensaje</button>
 
         </form>
     </div>
@@ -76,6 +72,7 @@
         crossorigin="anonymous"></script>
 
     <script src="../app.js"></script>
+    <script src="../constanteModeDark.js"></script>
 </body>
 
 </html>

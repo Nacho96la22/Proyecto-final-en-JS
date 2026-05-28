@@ -1,11 +1,123 @@
-/* Fondo del web general */
+/* ==========================================
+   TEMA CLARO (Inicial y Estilos Generales)
+   ========================================== 
+*/
+body {
+    background-color: #ffffff;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+.accordion-button {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.accordion-body,
+header,
+.footer {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.footer-logo {
+    color: #333;
+}
+
+.footer-logo:hover {
+    color: #007bff;
+}
+
+/* ==========================================
+   TEMA OSCURO (Corregido e Incluyendo Todo)
+   ========================================== 
+*/
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .accordion-button {
+    background-color: #252525;
+    color: #ffffff;
+}
+
+body.dark-mode .accordion-body,
+body.dark-mode header,
+body.dark-mode .footer {
+    background-color: #1e1e1e !important; 
+    color: #ffffff !important;            
+}
+
+body.dark-mode .footer-logo {
+    color: #ffffff !important;
+}
+
+body.dark-mode .footer-logo:hover {
+    color: #007bff;
+}
+
+body.dark-mode .card {
+    background-color: #1e1e1e !important;
+    border-color: #2d2d2d !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .form-select {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #2d2d2d !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+}
+
+body.dark-mode .text-muted,
+body.dark-mode .form-floating > label {
+    color: #b0b0b0 !important;
+}
+
+
+body.dark-mode .form-floating>.form-select~label::after,
+body.dark-mode .form-floating>.form-control~label::after {
+    background-color: transparent !important;
+}
+
+body.dark-mode .list-group-item {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #2d2d2d !important;
+}
+
+body.dark-mode .form-control {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #2d2d2d !important;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #888888 !important;
+}
+
+body.dark-mode .form-control:focus {
+    background-color: #252525 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 0 0.25rem rgba(225, 6, 0, 0.25) !important;
+}
+
+/* ==========================================
+   Fondo del web general 
+   ==========================================
+*/
 body {
     background-color: #ffffff;
     margin: 0;
     padding: 0;
 }
 
-/* Tamaño de la carousel */
+/* ==========================================
+   Tamaño de la carousel 
+   ==========================================
+   */
 #carouselExampleInterval {
     max-width: 1200px !important; 
     width: 95% !important; 
@@ -30,22 +142,21 @@ body {
     background-color: #000000; 
 }
 
+/* ==========================================
+   La bandera en la barra 
+   ==========================================
+*/
 .navbar-bandera {
-    /* Reemplaza con el nombre o ruta real de tu imagen PNG */
     background-image: url('img/head/banderacuadro.png'); 
-    
-    /* Hace que la imagen cubra todo el espacio sin deformarse */
     background-size: cover; 
-    
-    /* Centra la imagen */
     background-position: center right; 
-    
-    /* Evita que la imagen se repita como un mosaico */
     background-repeat: repeat-x; 
-
 }
 
-/* El estilo del boton de contacto */
+/* ==========================================
+   El estilo del boton de contacto
+   ==========================================
+*/
 .navbar-nav .btn-contacto-verde {
     color: #ffffff !important;  
     background-color: #198754 !important;     
@@ -61,7 +172,10 @@ body {
     color: #ffffff !important;            
 }
 
-/* El estilo del boton de carrito */
+/* ==========================================
+   El estilo del boton de carrito 
+   ========================================
+*/
 .btn-carrito {
     background-color: #e10600 !important; 
     color: #ffffff !important;            
@@ -73,4 +187,16 @@ body {
     background-color: transparent !important;
     border: 2px solid #e10600 !important;
     color: #e10600 !important;
+}
+
+/* ==========================================
+   El estilo del boton de enviar contacto
+   ========================================
+*/
+.btn-enviar-contacto {
+    background-color: #e10600 !important; 
+    color: #ffffff !important;            
+    border: 2px solid #e10600 !important;
+    font-weight: bold;                    
+    
 }

@@ -1,6 +1,7 @@
-// ==========================================
-// LÓGICA DEL CARRITO (Al cargar la página)
-// ==========================================
+/* ==========================================
+   LÓGICA DEL CARRITO (Al cargar la página)
+   ==========================================
+*/
 document.addEventListener('DOMContentLoaded', function(){
     const textoCarrito = document.getElementById("cantidad");
     const textoLista = document.getElementById("lista-Productos");
@@ -35,9 +36,10 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 });
 
-// ==========================================
-// FUNCIONES DEL CARRITO (Botones)
-// ==========================================
+/* ==========================================
+   FUNCIONES DEL CARRITO (Botones)
+   ==========================================
+*/
 function vaciarProducto(){
     localStorage.removeItem('cantCarrito');
     localStorage.removeItem('listaNombres');
@@ -82,9 +84,10 @@ function comprarCarrito() {
     }
 }
 
-// ==========================================
-// LÓGICA DE FILTROS EN PÁGINA PRINCIPAL
-// ==========================================
+/*  ==========================================
+    LÓGICA DE FILTROS EN PÁGINA PRINCIPAL
+    ==========================================
+*/
 document.addEventListener('DOMContentLoaded', function() {
     const filtroCategoria = document.getElementById('seleccion-categoria');
     const productos = document.querySelectorAll('.tarjeta-producto');
@@ -109,9 +112,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// ==========================================
-// FUNCIÓN DEL FORMULARIO DE CONTACTO
-// ==========================================
+/* ==========================================
+   FUNCIÓN DEL FORMULARIO DE CONTACTO
+   ==========================================
+*/
 function recibirContacto(){
     function verificarMensaje(mensaje){
         let ok = false;
