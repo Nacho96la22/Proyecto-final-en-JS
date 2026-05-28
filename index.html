@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="es" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,12 +49,11 @@
 				</div>
 			</nav>
 			<div class="position-relative">
-				<button
-					id="contrast-btn"
-					class="position-absolute top-0 end-0 me-3 mt-3 btn btn-dark"
-				>
-					<span class="bi bi-circle-half"> Cambiar Contraste</span>
-				</button>
+				
+                <button id="themeBtn" class="toggle-btn position-absolute top-0 end-0 me-3 mt-1 btn btn-dark">
+                    <span class="sun"> ☀️ </span>
+                    <span class="moon"> 🌙 </span>
+                </button>
 			</div>
 		</header>
     <div class="contenedor-carrusel">
@@ -123,7 +121,7 @@
                             <h5 class="card-title">Remera de Alpine</h5>
                             <p class="card-text text-muted">Versión original</p>
                             <h4 class="text-danger">$45.000</h4>
-                            <a href="#" class="btn btn-carrito w-100 mt-2" onclick="agregarProducto(event,'Remera de Alpine')">Agrega al carrito</a>
+                            <a href="#" class="btn btn-carrito w-100 mt-2" onclick="agregarProducto(event, 'Remera de Alpine', 45000)">Agrega al carrito</a>
                         </div>
                     </div>
                 </div>
@@ -135,7 +133,7 @@
                             <h5 class="card-title">Campera de Scuderia Ferrari</h5>
                             <p class="card-text text-muted">Versión original</p>
                             <h4 class="text-danger">$55.000</h4>
-                            <a href="#" class="btn btn-carrito w-100 mt-2" onclick="agregarProducto(event,'Campera de Ferrari')">Agrega al carrito</a>
+                            <a href="#" class="btn btn-carrito w-100 mt-2" onclick="agregarProducto(event,'Campera de Ferrari', 55000)">Agrega al carrito</a>
                         </div>
                     </div>
                 </div>
@@ -147,7 +145,7 @@
                             <h5 class="card-title">Gorra de Mercedes </h5>
                             <p class="card-text text-muted">Versión réplica</p>
                             <h4 class="text-danger">$20.000</h4>
-                            <a href="#" class="btn btn-carrito w-100 mt-2" onclick="agregarProducto(event,'Gorra de Mercedes')">Agrega al carrito</a>
+                            <a href="#" class="btn btn-carrito w-100 mt-2" onclick="agregarProducto(event,'Gorra de Mercedes', 20000)">Agrega al carrito</a>
                         </div>
                     </div>
                 </div>
@@ -159,7 +157,7 @@
                             <h5 class="card-title">Remera de Red Bull </h5>
                             <p class="card-text text-muted">Versión réplica</p>
                             <h4 class="text-danger">$40.000</h4>
-                            <a href="#" class="btn btn-carrito w-100 mt-2" onclick="agregarProducto(event,'Remera de Red Bull')">Agrega al carrito</a>
+                            <a href="#" class="btn btn-carrito w-100 mt-2" onclick="agregarProducto(event,'Remera de Red Bull', 40000)">Agrega al carrito</a>
                         </div>
                     </div>
                 </div>

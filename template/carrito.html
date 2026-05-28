@@ -36,17 +36,28 @@
         </nav>
 
         <div class="position-relative">
-            <button id="contrast-btn" class="position-absolute top-0 end-0 me-3 mt-3 btn btn-dark">
-                <span class="bi bi-circle-half"> Cambiar Contraste</span>
-            </button>
-        </div>
+				
+                <button id="themeBtn" class="toggle-btn position-absolute top-0 end-0 me-3 mt-1 btn btn-dark">
+                    <span class="sun"> ☀️ </span>
+                    <span class="moon"> 🌙 </span>
+                </button>
+			</div>
     <div class="container my-3">
-        <h1 class="text-bold">Carrito</h1>
+        <h1 class="fw-bold">Carrito</h1>
         <h4 id="cantidad">Cantidad de productos agregados: 0</h4>
+        
         <ul id="lista-Productos" class="list-group my-3" style="max-width: 500px;">
         </ul>
-        <button onclick="vaciarProducto()"> Eliminar la lista. </button>
-    </div>  
+
+        <!-- NUEVO: Mostrar el monto total -->
+        <h3 id="monto-total" class="text-success mb-3 fw-bold">Total: $0</h3>
+        
+        <!-- NUEVOS: Botones de acción -->
+        <div class="d-flex gap-2 mb-5">
+            <button class="btn btn-outline-danger fw-bold" onclick="vaciarProducto()">Vaciar lista</button>
+            <button id="btn-comprar" class="btn btn-success fw-bold px-5" onclick="comprarCarrito()">Comprar</button>
+        </div>
+    </div> 
     </header>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

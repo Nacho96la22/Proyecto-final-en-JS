@@ -1,7 +1,11 @@
-// Texto de la lista de productos
+// ==========================================
+// LÓGICA DEL CARRITO (Al cargar la página)
+// ==========================================
 document.addEventListener('DOMContentLoaded', function(){
     const textoCarrito = document.getElementById("cantidad");
     const textoLista = document.getElementById("lista-Productos");
+    const textoTotal = document.getElementById("monto-total"); 
+    const btnComprar = document.getElementById("btn-comprar"); 
 
     if(textoCarrito){
         const cantTotal = localStorage.getItem('cantCarrito') || 0;
@@ -10,43 +14,47 @@ document.addEventListener('DOMContentLoaded', function(){
 
     if (textoLista){
         const lista = JSON.parse(localStorage.getItem('listaNombres')) || [];
+        // Traemos el total del LocalStorage
+        const total = parseFloat(localStorage.getItem('totalCarrito')) || 0; 
         
+        // Mostramos el total
+        if(textoTotal) {
+            textoTotal.innerHTML = "Total: $" + total; 
+        }
+
         if(lista.length === 0) {
             textoLista.innerHTML = `<li class="list-group-item text-muted">No hay productos en el carrito.</li>`;
+            if(btnComprar) btnComprar.disabled = true; // Apagamos el botón si está vacío
         } else {
-            // Si tiene productos, limpiamos el contenedor y los dibujamos uno por uno
             textoLista.innerHTML = ""; 
-            
             lista.forEach(function(nombre) {
-                // Le sumamos a la lista un ítem de Bootstrap con el nombre del producto
                 textoLista.innerHTML += `<li class="list-group-item"> ${nombre}</li>`;
             });
+            if(btnComprar) btnComprar.disabled = false; // Prendemos el botón si hay productos
         }
     }
-
 });
 
-// Vaciar la lista de producto
+// ==========================================
+// FUNCIONES DEL CARRITO (Botones)
+// ==========================================
 function vaciarProducto(){
     localStorage.removeItem('cantCarrito');
     localStorage.removeItem('listaNombres');
+    localStorage.removeItem('totalCarrito'); // Borramos la memoria del dinero
     
     const textoCarrito = document.getElementById("cantidad");
-
-    if(textoCarrito){
-        textoCarrito.innerHTML = "Cantidad de productos agregados: 0";
-    }
-
     const textoLista = document.getElementById("lista-Productos");
-    if(textoLista) {
-        textoLista.innerHTML = `<li class="list-group-item text-muted">No hay productos en el carrito.</li>`;
-    }
+    const textoTotal = document.getElementById("monto-total");
+    const btnComprar = document.getElementById("btn-comprar");
+
+    if(textoCarrito) textoCarrito.innerHTML = "Cantidad de productos agregados: 0";
+    if(textoTotal) textoTotal.innerHTML = "Total: $0"; // Volvemos a cero visualmente
+    if(textoLista) textoLista.innerHTML = `<li class="list-group-item text-muted">No hay productos en el carrito.</li>`;
+    if(btnComprar) btnComprar.disabled = true;
 }
 
-// Agregar un producto
-function agregarProducto(evento,nomProducto){
-    // ese evento es ignorante porque si agrego al carrito 
-    // y se mueve hacia arriba sin sentido.
+function agregarProducto(evento, nomProducto, precioProducto){
     evento.preventDefault();
 
     let cantProducto = parseInt(localStorage.getItem('cantCarrito')) || 0;
@@ -55,28 +63,39 @@ function agregarProducto(evento,nomProducto){
 
     let listaNombres = JSON.parse(localStorage.getItem('listaNombres')) || [];
     listaNombres.push(nomProducto);
-
     localStorage.setItem('listaNombres', JSON.stringify(listaNombres));
-    alert("Se agrego el producto! Revisá en el carrito.");
+
+    // Lógica para sumar el dinero
+    let totalActual = parseFloat(localStorage.getItem('totalCarrito')) || 0;
+    totalActual += (precioProducto || 0); 
+    localStorage.setItem('totalCarrito', totalActual);
+
+    alert("¡Se agregó el producto! Revisá el carrito.");
 }
 
-// la funcion de Productos en principal
+function comprarCarrito() {
+    const cantTotal = parseInt(localStorage.getItem('cantCarrito')) || 0;
+    
+    if (cantTotal > 0) {
+        alert("¡Comprado con éxito! Gracias por tu compra en Tienda de F1.");
+        vaciarProducto(); // Limpiamos la pantalla y memoria después de comprar
+    }
+}
+
+// ==========================================
+// LÓGICA DE FILTROS EN PÁGINA PRINCIPAL
+// ==========================================
 document.addEventListener('DOMContentLoaded', function() {
     const filtroCategoria = document.getElementById('seleccion-categoria');
     const productos = document.querySelectorAll('.tarjeta-producto');
 
-    // Función que analiza y aplica los filtros cruzados
     function filtrarProductos() {
         const catSeleccionada = filtroCategoria.value;
 
         productos.forEach(producto => {
-            // Obtenemos las etiquetas data de cada tarjeta
             const productoCat = producto.getAttribute('data-categoria');
-
-            // Evaluamos si coincide con la categoría o si está en "General"
             const coincideCat = (catSeleccionada === 'general' || catSeleccionada === productoCat);
             
-            // Si pasa ambas condiciones, se muestra. Si no, se oculta limpiamente.
             if (coincideCat) {
                 producto.style.display = 'block';
             } else {
@@ -85,15 +104,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // El "if" previene errores en páginas como contacto.html donde no están los filtros
     if (filtroCategoria) {
         filtroCategoria.addEventListener('change', filtrarProductos);
     }
 });
 
-// la funcion de Contacto
+// ==========================================
+// FUNCIÓN DEL FORMULARIO DE CONTACTO
+// ==========================================
 function recibirContacto(){
-
     function verificarMensaje(mensaje){
         let ok = false;
         if (mensaje.trim()){
