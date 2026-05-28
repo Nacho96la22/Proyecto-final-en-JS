@@ -108,18 +108,7 @@
                         <label for="listaCategorias">Seleccioné una categoría:</label>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="form-floating">
-                        <select class="form-select" id="seleccion-equipo">
-                            <option value="general">General</option>
-                            <option value="alpine">Alpine</option>
-                            <option value="redbull">Red Bull</option>
-                            <option value="ferrari">Ferrari</option>
-                            <option value="mercedes">Mercedes</option>
-                        </select>
-                        <label for="listaEquipos">Seleccioné un equipo:</label>
-                    </div>        
-                </div>
+
             </div>    
         </div>
 
@@ -127,12 +116,14 @@
             <div class="row row-cols-1 row-cols-md-3 g-4">
 
                 <div class="col tarjeta-producto" data-categoria="remera" data-equipo="alpine">
-                    <div class="card h-100 shadow-sm"> <img src="img/products/alpine/remera-alpine.png" class="card-img-top"alt="Remera Alpine">
+                    <div class="card h-100 shadow-sm"> <img src="img/products/alpine/remera-alpine.png" 
+                        class="card-img-top" 
+                        alt="Remera Alpine">
                         <div class="card-body text-center">
                             <h5 class="card-title">Remera de Alpine</h5>
                             <p class="card-text text-muted">Versión original</p>
                             <h4 class="text-danger">$45.000</h4>
-                            <a href="#" class="btn btn-carrito w-100 mt-2">Agrega al carrito</a>
+                            <a href="#" class="btn btn-carrito w-100 mt-2" onclick="agregarProducto(event,'Remera de Alpine')">Agrega al carrito</a>
                         </div>
                     </div>
                 </div>
@@ -144,7 +135,7 @@
                             <h5 class="card-title">Campera de Scuderia Ferrari</h5>
                             <p class="card-text text-muted">Versión original</p>
                             <h4 class="text-danger">$55.000</h4>
-                            <a href="#" class="btn btn-carrito w-100 mt-2">Agrega al carrito</a>
+                            <a href="#" class="btn btn-carrito w-100 mt-2" onclick="agregarProducto(event,'Campera de Ferrari')">Agrega al carrito</a>
                         </div>
                     </div>
                 </div>
@@ -156,7 +147,7 @@
                             <h5 class="card-title">Gorra de Mercedes </h5>
                             <p class="card-text text-muted">Versión réplica</p>
                             <h4 class="text-danger">$20.000</h4>
-                            <a href="#" class="btn btn-carrito w-100 mt-2">Agrega al carrito</a>
+                            <a href="#" class="btn btn-carrito w-100 mt-2" onclick="agregarProducto(event,'Gorra de Mercedes')">Agrega al carrito</a>
                         </div>
                     </div>
                 </div>
@@ -168,7 +159,7 @@
                             <h5 class="card-title">Remera de Red Bull </h5>
                             <p class="card-text text-muted">Versión réplica</p>
                             <h4 class="text-danger">$40.000</h4>
-                            <a href="#" class="btn btn-carrito w-100 mt-2">Agrega al carrito</a>
+                            <a href="#" class="btn btn-carrito w-100 mt-2" onclick="agregarProducto(event,'Remera de Red Bull')">Agrega al carrito</a>
                         </div>
                     </div>
                 </div>
