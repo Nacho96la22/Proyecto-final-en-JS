@@ -1,11 +1,11 @@
 # Proyecto final en JS
 
-## Integrantes del equipo
+## Integrantes del equipo 👨🏻‍💻
 
 - **[Ignacio José Lanciotti](https://github.com/Nacho96la22)**
 - **[Dardo Santana](https://github.com/dardosantana)**
 
-## Objetivo
+## Objetivo 🎯
 
 Este proyecto fue desarrollado como el trabajo Práctico Final para el curso de Desarrollo Web / JavaScript de CILSA.
 
@@ -16,7 +16,7 @@ El objetivo principalmente es aplicar de forma e integrada los conocimientos adq
 * Persistencia y almacenamiento de datos del lado del cliente utilizando **LocalStorage** (para la memoria del carrito de compras y la preferencia del Modo Oscuro).
 * Maquetación adaptable y accesible para garantizar una experiencia de usuario fluida en cualquier dispositivo.
 
-## Descripción del sitio web
+## Descripción del sitio web 💻
 
 Este sitio web consiste en una **tienda online de Fórmula 1** dedicada a la exhibición y simulación de venta de indumentaria de los equipos más importantes del automovilismo internacional. El diseño de la plataforma está inspirado en la pasión de la máxima categoría, destacando a grandes figuras actuales como Franco Colapinto, Lewis Hamilton y Max Verstappen, entre otros pilotos destacados.
 
