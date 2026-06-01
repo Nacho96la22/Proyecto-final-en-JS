@@ -22,4 +22,6 @@ Este sitio web consiste en una **tienda online de Fórmula 1** dedicada a la exh
 
 Con respecto a su estructura, la experiencia de navegación se divide en tres secciones principales. En la página de **Inicio** se presenta un carrusel interactivo de novedades y un catálogo de productos con filtros dinámicos por escudería y categoría de prenda, una página de **Carrito de Compras** se dedica donde el usuario puede previsualizar en tiempo real el listado detallado de los productos seleccionados, el contador total de ítems y la opción de gestionar o vaciar la lista. y la ultima página de **Contacto:** que incluye un formulario validado para que los usuarios puedan enviar sus consultas de manera directa.
 
+**El proyecto final en vivo: [Link](https://github.com/Nacho96la22/Proyecto-final-en-JS)**
+
 ![gif](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3AwZG42ZDVvMHN6djg5eTIxMXJ4aGJyNTNpbDZmaXg1cXg4end6OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LEeZ7vHscwKEHIFuSi/giphy.gif)
